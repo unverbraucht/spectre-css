@@ -10,6 +10,10 @@
 
   $grid-spacing: math.div($layout-spacing, $layout-spacing * 0 + 1) * $html-font-size;
 
+  &.grid-2x {
+    max-width: $grid-spacing * 2 + $size-2x;
+  }
+
   &.grid-xl {
     max-width: $grid-spacing * 2 + $size-xl;
   }
@@ -36,7 +40,8 @@
 .show-sm,
 .show-md,
 .show-lg,
-.show-xl {
+.show-xl,
+.show-2x {
   display: none !important;
 }
 
@@ -135,6 +140,68 @@
 }
 .col-mr-auto {
   margin-right: auto;
+}
+@media (max-width: $size-2x) {
+  .col-2x-12,
+  .col-2x-11,
+  .col-2x-10,
+  .col-2x-9,
+  .col-2x-8,
+  .col-2x-7,
+  .col-2x-6,
+  .col-2x-5,
+  .col-2x-4,
+  .col-2x-3,
+  .col-2x-2,
+  .col-2x-1,
+  .col-2x-auto {
+    flex: none;
+  }
+  .col-2x-12 {
+    width: 100%;
+  }
+  .col-2x-11 {
+    width: 91.66666667%;
+  }
+  .col-2x-10 {
+    width: 83.33333333%;
+  }
+  .col-2x-9 {
+    width: 75%;
+  }
+  .col-2x-8 {
+    width: 66.66666667%;
+  }
+  .col-2x-7 {
+    width: 58.33333333%;
+  }
+  .col-2x-6 {
+    width: 50%;
+  }
+  .col-2x-5 {
+    width: 41.66666667%;
+  }
+  .col-2x-4 {
+    width: 33.33333333%;
+  }
+  .col-2x-3 {
+    width: 25%;
+  }
+  .col-2x-2 {
+    width: 16.66666667%;
+  }
+  .col-2x-1 {
+    width: 8.33333333%;
+  }
+  .col-2x-auto {
+    width: auto;
+  }
+  .hide-2x {
+    display: none !important;
+  }
+  .show-2x {
+    display: block !important;
+  }
 }
 @media (max-width: $size-xl) {
   .col-xl-12,
